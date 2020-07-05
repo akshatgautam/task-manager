@@ -3,7 +3,7 @@
     <p class="list-name">{{listTitle}}</p>
     <i class="fas fa-ellipsis-h"></i>
   </div>
-  <div class="body">
+  <div class="list-body">
     <template v-for="todo in listData">
       <todo :todoDetails="todo" :key="todo.id"></todo>
     </template>

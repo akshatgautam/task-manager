@@ -50,7 +50,7 @@ ul {
   display: flex;
   min-height: 100vh;
   .body {
-    flex: 1;
+    width: calc(100% - 75px);
   }
 }
 
