@@ -71,6 +71,7 @@ export default {
       this.resetForm();
       this.closeAddTodoModal();
     },
+    
     resetForm() {
       this.title = '';
       this.description = '';
