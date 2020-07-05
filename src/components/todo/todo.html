@@ -1,0 +1,28 @@
+<div class="todo" :id="todoDetails.id" ref="todo" draggable="true">
+  <p class="todo-name">
+    {{todoDetails.title}}
+    <i
+      class="far fa-trash-alt"
+      @click.stop="deleteTask"
+      v-if="todoDetails.status !== status.DONE"
+    ></i>
+  </p>
+  <p class="todo-description">
+    {{todoDetails.description}}
+  </p>
+  <img draggable="false" v-if="todoDetails.image" :src="todoDetails.image" />
+  <div class="todo-details">
+    <div class="markers">
+      <tag :tagData="timeTag">
+        <i v-if="isDoneTodo" slot="icon" class="fas fa-check"></i>
+        <i v-else slot="icon" class="far fa-bell"></i>
+      </tag>
+      <tag v-if="todoDetails.image" :tagData="attachmentsTag">
+        <i slot="icon" class="fas fa-paperclip"></i>
+      </tag>
+    </div>
+    <div class="users">
+      <img class="user-img" src="./../../assets/user.png" alt="user-dp" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="project">
+  <div class="info">
+    <section class="left">
+      <i class="far fa-star"></i>
+      <tag :tagData="peopleTag">
+        <i slot="icon" class="far fa-user"></i>
+      </tag>
+      <tag :tagData="timeTag">
+        <i slot="icon" class="far fa-clock"></i>
+      </tag>
+    </section>
+    <section class="right">
+      <span class="toggle-text">Show my tasks</span>
+      <toggle-button
+        color="#ffb75e"
+      />
+    </section>
+  </div>
+  <div class="todos">
+    <todo-list
+      :listType="status.TODO"
+      listTitle="ToDo"
+      :listData="pendingTodos"
+    ></todo-list>
+    <todo-list
+      :listType="status.IN_PROGRESS"
+      listTitle="In Progress"
+      :listData="inProgressTodos"
+    ></todo-list>
+    <todo-list
+      :listType="status.IN_REVIEW"
+      listTitle="In Review"
+      :listData="inReviewTodos"
+    ></todo-list>
+    <todo-list
+      :listType="status.DONE"
+      listTitle="Done"
+      :listData="completedTodos"
+    ></todo-list>
+  </div>
+</div>

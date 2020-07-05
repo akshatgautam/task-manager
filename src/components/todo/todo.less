@@ -1,0 +1,64 @@
+.todo {
+  width: 100%;
+  border-radius: 4px;
+  padding: 16px 0;
+  background-color: @white;
+  box-shadow: 1px 1px 6px 1px @grey-light;
+  margin-bottom: 24px;
+  cursor: pointer;
+  .todo-name {
+    border-left: 4px solid var(--priority);
+    font-size: @font-size-s;
+    color: @grey-dark;
+    font-weight: @font-weight-bold;
+    display: flex;
+    justify-content: space-between;
+    .fa-trash-alt {
+      margin-left: 16px;
+    }
+  }
+
+  .todo-description {
+    font-size: @font-size-xs;
+    color: @grey-dark;
+    margin-top: 8px;
+  }
+
+  img {
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .todo-name,
+  .todo-description,
+  .todo-details {
+    padding: 0 16px;
+  }
+
+  .todo-description,
+  .todo-details {
+    margin-left: 4px;
+  }
+
+  .todo-details {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    align-items: center;
+    .markers  {
+      display: flex;
+      .tag {
+        margin-right: 12px;
+      }
+    }
+    .users {
+      img.user-img {
+        width: 34px;
+        height: 34px;
+        border-radius: 4px;
+        margin: 0;
+      }
+    }
+  }
+}
